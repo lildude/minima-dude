@@ -145,6 +145,9 @@ blockquote {
   > :last-child {
     margin-bottom: 0;
   }
+  cite {
+    display: block;
+  }
 }
 
 
@@ -175,6 +178,20 @@ pre {
   }
 }
 
+/**
+ * Tables
+ */
+table {
+  margin-bottom: $base-font-size;
+}
+
+/**
+ * Iframes - mainly YouTube videos
+ */
+iframe {
+  display: block;
+  margin: auto;
+}
 
 
 /**
@@ -241,6 +258,9 @@ pre {
   }
 }
 
+/**
+ * Fancy colours
+ */
 .text-gradient {
     background-image: linear-gradient(90deg, #F79533 0%, #F37055 15%, #EF4E7B 30%, #A166AB 44%, #5073B8 58%, #1098AD 72%, #07B39B 86%, #6DBA82 100%);
     background-size: cover;
@@ -250,13 +270,12 @@ pre {
     text-fill-color: transparent;
 }
 
+/**
+ * Micropub photos
+ */
 .micropub_photo {
   text-align: center;
   a {
     color: $text-color;
   }
-}
-
-table {
-  margin-bottom: $base-font-size;
 }
