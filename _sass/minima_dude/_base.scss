@@ -250,6 +250,13 @@ pre {
     text-fill-color: transparent;
 }
 
+.micropub_photo {
+  text-align: center;
+  a {
+    color: $text-color;
+  }
+}
+
 table {
   margin-bottom: $base-font-size;
 }

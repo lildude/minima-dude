@@ -16,8 +16,8 @@ layout: default
         {% for post in day.items %}
           <li>
             {% if post.tags contains site.minima_dude.micropub_photo_tag %}
-              <span class="center">
-                {{ post.content }}
+              <span class="micropub_photo">
+                <a href="{{ post.url | relative_url }}">{{ post.content }}</a>
               </span>
             {% else %}
               {% if post.tags contains site.minima_dude.micropub_note_tag %}
