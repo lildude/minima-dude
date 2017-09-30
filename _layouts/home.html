@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<div class="home">
+  {{ content }}
+  {% assign date_format = site.minima_dude.date_format | default: "%-d %b %Y" %}
+  {% assign postsByDay =
+  site.posts | group_by_exp:"post", "post.date | date: date_format" %}
+
+  <ul class="post-list">
+    {% for day in postsByDay %}
+    <li>
+      <span class="post-meta">{{ day.name }}</span>
+      <ul class="post-list">
+        {% for post in day.items %}
+          <li>
+            {% if post.tags contains site.minima_dude.micropub_photo_tag %}
+              <span class="center">
+                {{ post.content }}
+              </span>
+            {% else %}
+              {% if post.tags contains site.minima_dude.micropub_note_tag %}
+                <a class="post-link" href="{{ post.url | relative_url }}">{% include icon-moleskin.svg %}</a>
+                {{ post.content }}
+              {% else %}
+                <h2>
+                  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h2>
+                {% assign word_count = post.content | strip_html | number_of_words %}
+                {% if word_count > 100 %}
+                  {{ post.excerpt }}
+                  <span class="more-link"><a href="{{ post.url }}">Continue reading →</a></span>
+                {% else %}
+                  {{ post.content }}
+                {% endif %}
+              {% endif %}
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
