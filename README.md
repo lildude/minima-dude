@@ -26,7 +26,7 @@ Or install it yourself as:
 
 ## Usage
 
-Use this theme as you would any other. The theme uses the `post` type for all micropub entries and relies on tags in the post to adjust the appearance.
+As this theme is based on the Minima theme, it takes the same site-wide configuration options. The theme uses the `post` type for all micropub entries and relies on tags in the post to adjust the appearance.
 
 You can tweak the behaviour using the following settings in your `_config.yml` file:
 
