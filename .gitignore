@@ -5,6 +5,7 @@ _site
 Gemfile.lock
 _posts
 *.md
+!README.md
 _config.yml
 404.html
 img
