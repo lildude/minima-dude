@@ -26,15 +26,15 @@ Or install it yourself as:
 
 ## Usage
 
-As this theme is based on the Minima theme, it takes the same site-wide configuration options. The theme uses the `post` type for all micropub entries and relies on tags in the post to adjust the appearance.
+As this theme is based on the Minima theme, it takes the same site-wide configuration options. The theme uses different layouts for each of the different micropub entry types implemented. This means you need to include the layout in the post frontmatter, else the posts will get the default `post` layout.
+
+Currently supported types are: `photo` and `note`.
 
 You can tweak the behaviour using the following settings in your `_config.yml` file:
 
 ```yaml
 minima_dude:
   date_format: "%-d %b %Y"
-  micropub_note_tag: note
-  micropub_photo_tag: photo
 ```
 
 ## Contributing
