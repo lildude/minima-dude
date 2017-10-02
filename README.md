@@ -26,16 +26,21 @@ Or install it yourself as:
 
 ## Usage
 
-As this theme is based on the Minima theme, it takes the same site-wide configuration options. The theme uses different layouts for each of the different micropub entry types implemented. This means you need to include the layout in the post frontmatter, else the posts will get the default `post` layout.
+As this theme is based on the [Minima theme](https://github.com/jekyll/minima), it takes the same site-wide configuration options, but using `minima_dude` for the theme name instead.  
+
+### Micropub
+
+The theme uses different layouts for each of the different micropub entry types implemented. This means you need to include the layout in the post frontmatter, else the posts will get the default `post` layout.
 
 Currently supported types are: `photo` and `note`.
 
-You can tweak the behaviour using the following settings in your `_config.yml` file:
+### Responsive Videos
 
-```yaml
-minima_dude:
-  date_format: "%-d %b %Y"
-```
+You can use the following to quickly and easily embed responsive videos in your posts:
+
+
+    {% include video id="[video_id]" provider="[youtube|vimeo]" %}
+
 
 ## Contributing
 
