@@ -15,12 +15,12 @@ layout: default
       <ul class="post-list">
         {% for post in day.items %}
           <li>
-            {% if post.tags contains site.minima_dude.micropub_photo_tag %}
+            {% if post.layout == 'photo' %}
               <span class="micropub_photo">
                 <a href="{{ post.url | relative_url }}">{{ post.content }}</a>
               </span>
             {% else %}
-              {% if post.tags contains site.minima_dude.micropub_note_tag %}
+              {% if post.layout == 'note' %}
                 <a class="post-link" href="{{ post.url | relative_url }}">{% include icon-moleskin.svg %}</a>
                 {{ post.content }}
               {% else %}

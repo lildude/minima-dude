@@ -3,12 +3,11 @@ layout: default
 ---
 <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  {% unless page.tags contains site.minima_dude.micropub_note_tag or page.tags contains site.minima_dude.micropub_photo_tag %}
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">{{ page.title | escape }}</h1>
   </header>
-  {% endunless %}
-  <div class="post-content{% if page.tags contains site.minima_dude.micropub_photo_tag %} center{% endif %}" itemprop="articleBody">
+
+  <div class="post-content" itemprop="articleBody">
     {{ content }}
   </div>
 
