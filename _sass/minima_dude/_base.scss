@@ -64,20 +64,38 @@ img.instagram { max-width: 640px; display: block; float: none; margin: 0 auto; }
 .center, .centered { margin: 0 auto; text-align: center; }
 .alignright { float: right; margin-left: 1.571em; }
 .alignleft { float: left; margin-right: 1.571em; }
-
-
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
 
 /**
  * Figures
  */
-figure > img {
-  display: block;
-}
+figure {
 
-figcaption {
-  font-size: $small-font-size;
-}
+  img {
+    display: block;
+  }
 
+  &.half {
+    > img {
+      display: inline;
+      width: calc(50% - 0.5em);
+    }
+  }
+
+  &.third {
+    > img {
+      display: inline;
+      width: calc(33.3333% - 0.5em);
+    }
+  }
+
+  figcaption {
+    font-size: $small-font-size;
+    width: 100%;
+  }
+}
 
 
 /**
