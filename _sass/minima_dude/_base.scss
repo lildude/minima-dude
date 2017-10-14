@@ -182,7 +182,31 @@ pre {
  * Tables
  */
 table {
+  width: 100%;
   margin-bottom: $base-font-size;
+  border-collapse: collapse;
+}
+
+thead {
+  background-color: $border-color;
+  border-bottom: 2px solid mix(#000, $border-color, 25%);
+}
+
+th {
+  padding: 0.5em;
+  font-weight: bold;
+  text-align: left;
+}
+
+td {
+  padding: 0.5em;
+  border-bottom: 1px solid mix(#000, $border-color, 25%);
+}
+
+tr,
+td,
+th {
+  vertical-align: middle;
 }
 
 /**
