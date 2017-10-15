@@ -259,3 +259,16 @@
     }
   }
 }
+
+ul.archives {
+  margin-left: 0;
+  li {
+    list-style-type: disc;
+  }
+  .i-moleskin {
+    width: inherit;
+  }
+  .i-moleskin, .i-camera {
+    color: $text-color;
+  }
+}
