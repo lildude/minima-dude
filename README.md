@@ -28,7 +28,7 @@ Or install it yourself as:
 
 As this theme is based on the [Minima theme](https://github.com/jekyll/minima), it takes the same site-wide configuration options, but using `minima_dude` for the theme name instead.  
 
-### Micropub
+### Post Types
 
 The theme uses different layouts for each of the different micropub entry types implemented. This means you need to include the layout in the post frontmatter, else the posts will get the default `post` layout.
 
@@ -119,7 +119,7 @@ This theme includes the [Jekyll Compress HTML](http://jch.penibelst.de/) layout 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/hello. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/lildude/minima-dude. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
