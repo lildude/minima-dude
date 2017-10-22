@@ -41,6 +41,81 @@ You can use the following to quickly and easily embed responsive videos in your 
 
     {% include video id="[video_id]" provider="[youtube|vimeo]" %}
 
+### Figures
+
+Generate a `<figure>` element with a single image and caption:
+
+    {% include figure src="[img src]" alt="[alt text]" caption="[caption text]" %}
+
+### Alignment
+
+This theme includes a few helper classes for aligning text and images:
+
+#### Text:
+
+```
+Left aligned text
+{: .text-left}
+```
+
+```
+Center aligned text.
+{: .text-center}
+```
+
+```
+Right aligned text.
+{: .text-right}
+```
+
+```
+Justified text.
+{: .text-justify}
+```
+
+```
+No wrap text.
+{: .text-nowrap}
+```
+
+#### Images
+
+```
+![Image](/path/to/img){: .align-left}
+```
+
+```
+![Image](/path/to/img){: .align-center}
+```
+
+```
+![Image](/path/to/img){: .align-right}
+```
+
+Two-up images using `.half` class in a `<figure>` element:
+
+```
+<figure class="half">
+  <img src="/path/to/img-1.jpg">
+  <img src="/path/to/img-2.jpg">
+  <figcaption>Caption describing these two images.</figcaption>
+</figure>
+```
+
+Three-up images using `.third` class in a `<figure>` element:
+
+```
+<figure class="third">
+  <img src="/path/to/img-1.jpg">
+  <img src="/path/to/img-2.jpg">
+  <img src="/path/to/img-3.jpg">
+  <figcaption>Caption describing these three images.</figcaption>
+</figure>
+```
+
+### Compressing HTML
+
+This theme includes the [Jekyll Compress HTML](http://jch.penibelst.de/) layout so you can add the necessary [configuration options](http://jch.penibelst.de/#configuration) to your `_config.yml` to reduce the size of the final HTML generated for your site.
 
 ## Contributing
 
