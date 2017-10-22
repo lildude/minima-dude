@@ -51,9 +51,9 @@ img {
   vertical-align: middle;
 }
 
-img.alignleft, img.left { float: left; margin-right: 10px }
-img.alignright, img.right { float: right; margin-left: 10px }
-img.aligncenter, img.center { clear: both; display: block; float: none; margin: 0 auto; }
+img.alignleft, img.left, img.align-left { float: left; margin-right: 10px }
+img.alignright, img.right, img.align-right { float: right; margin-left: 10px }
+img.aligncenter, img.center, img.align-center { clear: both; display: block; float: none; margin: 0 auto; }
 img.alignnone, img.block { clear: both; display: block; }
 img[align="left"] { clear: left; float: left; margin-right: 10px }
 img[align="right"] { clear: right; float: right; margin-left: 10px }
@@ -67,6 +67,8 @@ img.instagram { max-width: 640px; display: block; float: none; margin: 0 auto; }
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
+.text-justify { text-align: justify; }
+.text-nowrap { white-space: nowrap; }
 
 /**
  * Figures
