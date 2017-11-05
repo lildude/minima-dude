@@ -9,7 +9,7 @@ layout: default
   site.posts | group_by_exp:"post", "post.date | date: date_format" %}
 
   <ul class="post-list">
-    {% for day in postsByDay %}
+    {% for day in postsByDay limit:14 %}
     <li>
       <span class="post-meta">{{ day.name }}</span>
       <ul class="post-list">
