@@ -119,6 +119,12 @@
 .social-media-list {
   list-style: none;
   margin-left: 0;
+  li {
+    display: inline;
+  }
+  li > a > span.username {
+    display: none;
+  }
 }
 
 .footer-col-wrapper {
@@ -142,6 +148,7 @@
 .footer-col-2 {
   width: -webkit-calc(20% - (#{$spacing-unit} / 2));
   width:         calc(20% - (#{$spacing-unit} / 2));
+  text-align: center;
 }
 
 .footer-col-3 {
