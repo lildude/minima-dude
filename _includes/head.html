@@ -6,10 +6,10 @@
   <base href="{{ site.url }}">
   {% endif %}
   <title>
-    {% if page.title == "Home" %}
-      {{ site.title | escape }} · {{ site.tagline | escape }}
-    {% else %}
+    {% if page.title %}
       {{ page.title | escape }} · {{ site.title | escape }}
+    {% else %}
+      {{ site.title | escape }} · {{ site.tagline | escape }}
     {% endif %}
     {% if paginator.page > 1 %} (Page {{ paginator.page }}) {% endif %}
   </title>
