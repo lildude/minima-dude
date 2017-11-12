@@ -1,5 +1,7 @@
 # minima-dude
 
+TODO: Borrow ideas from https://mmistakes.github.io/minimal-mistakes/docs/utility-classes/
+
 Welcome to my new colourful and simple Jekyll theme, based on the Minima theme, but with a bit more colour and more functionality with support for different [micropub](https://www.w3.org/TR/micropub/) post types.
 
 ## Installation
@@ -27,6 +29,11 @@ Or install it yourself as:
 ## Usage
 
 As this theme is based on the [Minima theme](https://github.com/jekyll/minima), it takes the same site-wide configuration options, but using `minima_dude` for the theme name instead.  
+
+Additional configuration options that are supported are:
+
+- `tagline` - a short whitty tagline string
+- `dns_prefetch` - an array of URLs to prefetch. Don't include the preceding `http/https`
 
 ### Post Types
 
