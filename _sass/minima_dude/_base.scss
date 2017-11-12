@@ -322,6 +322,15 @@ iframe {
   }
 }
 
+.micropub_note {
+  p {
+    display: inline;
+  }
+  .note_url {
+    display: inline;
+  }
+}
+
 /**
  * Responsive video embeds
  */

@@ -21,8 +21,10 @@ layout: default
               </span>
             {% else %}
               {% if post.layout == 'note' %}
-                <a class="post-link" href="{{ post.url | relative_url }}">{% include icon-moleskin.svg %}</a>
+              <span class="micropub_note">
                 {{ post.content }}
+              </span>
+              <a class="note_url" href="{{ post.url | relative_url }}">#</a>
               {% else %}
                 <h2>
                   <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
