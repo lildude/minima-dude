@@ -14,7 +14,7 @@
     {% if page.title %}
       {{ page.title | escape }} · {{ site.title | escape }}
     {% else %}
-      {{ site.title | escape }} · {{ site.tagline | escape }}
+      {{ site.title | escape }} · {{ site.tagline | default: site.description | escape }}
     {% endif %}
     {% if paginator.page > 1 %} (Page {{ paginator.page }}) {% endif %}
   </title>
