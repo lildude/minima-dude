@@ -23,8 +23,8 @@ layout: default
               {% if post.layout == 'note' %}
               <span class="micropub_note">
                 {{ post.content }}
+                <a class="note_url" href="{{ post.url | relative_url }}">#</a>
               </span>
-              <a class="note_url" href="{{ post.url | relative_url }}">#</a>
               {% else %}
                 <h2>
                   <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
