@@ -38,7 +38,7 @@ ul, ol, dl, figure,
 }
 
 hr {
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #ddd;
   border-bottom: 0;
   margin: 1em auto;
   width: 50%;
@@ -363,4 +363,12 @@ iframe {
    .page__footer {
     position: static;
   }
+}
+
+div.photo {
+  max-width: 640px;
+  border: 1px solid #ddd;
+  padding: 10px 10px 0 10px;
+  margin: 0 auto;
+  border-radius: 5px;
 }

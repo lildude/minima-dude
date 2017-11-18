@@ -16,15 +16,15 @@ layout: default
         {% for post in day.items %}
           <li>
             {% if post.layout == 'photo' %}
-              <span class="micropub_photo">
+              <div class="micropub_photo photo">
                 <a href="{{ post.url | relative_url }}">{{ post.content }}</a>
-              </span>
+              </div>
             {% else %}
               {% if post.layout == 'note' %}
-              <span class="micropub_note">
+              <div class="micropub_note">
                 {{ post.content }}
                 <a class="note_url" href="{{ post.url | relative_url }}">#</a>
-              </span>
+              </div>
               {% else %}
                 <h2>
                   <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
