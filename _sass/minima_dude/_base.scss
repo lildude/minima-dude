@@ -59,6 +59,10 @@ img[align="left"] { clear: left; float: left; margin-right: 10px }
 img[align="right"] { clear: right; float: right; margin-left: 10px }
 img[align="middle"] { clear: both; display: block; float: none; margin: 0 auto; }
 img.instagram { max-width: 640px; display: block; float: none; margin: 0 auto; }
+@include media-query($on-laptop) {
+  img.instagram { max-width: 100%; }
+}
+
 
 /*---:[ Other Alignment ]:---*/
 .center, .centered { margin: 0 auto; text-align: center; }
