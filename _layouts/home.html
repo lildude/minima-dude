@@ -11,7 +11,7 @@ layout: default
   <ul class="post-list">
     {% for day in postsByDay limit:14 %}
     <li>
-      <span class="post-meta">{{ day.name }}</span>
+      <div class="post-meta">{{ day.name }}</div>
       <ul class="post-list">
         {% for post in day.items %}
           <li>
@@ -23,7 +23,8 @@ layout: default
               {% if post.layout == 'note' %}
               <div class="micropub_note">
                 {{ post.content }}
-                <a class="note_url" href="{{ post.url | relative_url }}">#</a>
+                <a class="note_url" href="{{ post.url | relative_url }}">¶</a>
+                <hr>
               </div>
               {% else %}
                 <h2>
@@ -38,7 +39,6 @@ layout: default
                 {% endif %}
               {% endif %}
             {% endif %}
-            <hr>
           </li>
         {% endfor %}
       </ul>

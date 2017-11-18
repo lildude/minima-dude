@@ -163,7 +163,7 @@ blockquote {
   color: $grey-color;
   border-left: 4px solid $grey-color-light;
   padding-left: $spacing-unit / 2;
-  @include relative-font-size(1.125);
+  /* @include relative-font-size(1.125); */
   letter-spacing: -1px;
 
   > :last-child {
@@ -171,9 +171,9 @@ blockquote {
   }
   cite {
     display: block;
-    &::before {
+    /* &::before {
       content: "— ";
-    }
+    }*/
   }
 }
 
@@ -323,15 +323,22 @@ iframe {
   text-align: center;
   a {
     color: $text-color;
+    &:hover {
+      text-decoration: none;
+    }
   }
 }
 
 .micropub_note {
-  p {
+  p:last-of-type {
     display: inline;
   }
   .note_url {
+    visibility: hidden;
     display: inline;
+  }
+  &:hover .note_url {
+    visibility: visible;
   }
 }
 
