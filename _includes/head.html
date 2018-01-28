@@ -10,14 +10,15 @@
   <link rel="dns-prefetch" href="//{{ url }}">
     {% endfor %}
   {% endif %}
-  <title>
+  {% capture page_title %}
     {% if page.title %}
-      {{ page.title | escape }} · {{ site.title | escape }}
+      {{ page.title }} · {{ site.title }}
     {% else %}
-      {{ site.title | escape }} · {{ site.tagline | default: site.description | escape }}
+      {{ site.title }} · {{ site.tagline | default: site.description }}
     {% endif %}
     {% if paginator.page > 1 %} (Page {{ paginator.page }}) {% endif %}
-  </title>
+  {% endcapture %}
+  <title>{{ page_title | escape }}</title>
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="shortcut icon" type="image/png" href="/img/profile.png" />
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
