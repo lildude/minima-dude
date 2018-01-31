@@ -321,11 +321,14 @@ iframe {
  */
 .micropub_photo {
   text-align: center;
-  a {
-    color: $text-color;
-    &:hover {
-      text-decoration: none;
-    }
+  .photo_url {
+    visibility: hidden;
+    display: inline;
+    float: right;
+    margin-top: -2em;
+  }
+  &:hover .photo_url {
+    visibility: visible;
   }
 }
 

@@ -18,7 +18,8 @@ layout: default
             {% if post.layout == 'photo' %}
               <div class="micropub_photo photo">
                 {{ post.content }}
-              {% comment %}<a href="{{ post.url | relative_url }}">{% include icon-instagram.svg %}</a>{% endcomment %}
+                <a class="photo_url" href="{{ post.url | relative_url }}">¶</a>
+                {% comment %}<a class="photo_url" href="{{ post.url | relative_url }}">{% include icon-instagram.svg %}</a>{% endcomment %}
               </div>
             {% else %}
               {% if post.layout == 'note' %}
