@@ -4,7 +4,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   {% unless jekyll.environment %}
   <base href="{{ site.url }}">
-  {% endif %}
+  {% endunless %}
   {% if site.dns_prefetch %}
     {% for url in site.dns_prefetch %}
   <link rel="dns-prefetch" href="//{{ url }}">
