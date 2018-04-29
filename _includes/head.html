@@ -2,9 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% if jekyll.environment != 'development' %}
   <base href="{{ site.url }}">
-  {% endif %}
   {% if site.dns_prefetch %}
     {% for url in site.dns_prefetch %}
   <link rel="dns-prefetch" href="//{{ url }}">
