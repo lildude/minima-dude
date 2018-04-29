@@ -2,9 +2,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  {% unless jekyll.environment %}
+  {% if jekyll.environment != 'development' %}
   <base href="{{ site.url }}">
-  {% endunless %}
+  {% endif %}
   {% if site.dns_prefetch %}
     {% for url in site.dns_prefetch %}
   <link rel="dns-prefetch" href="//{{ url }}">
@@ -24,11 +24,11 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  {% if jekyll.environment == '' and site.google_site_verification %}
+  {% if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google-site-verification }}" />
   {% endif %}
   {% include opengraph.html %}
 </head>
-{% if jekyll.environment == '' and site.google_analytics %}
+{% if site.google_analytics %}
 {% include google-analytics.html %}
 {% endif %}
