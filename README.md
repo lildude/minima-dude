@@ -34,6 +34,9 @@ Additional configuration options that are supported are:
 
 - `tagline` - a short whitty tagline string
 - `dns_prefetch` - an array of URLs to prefetch. Don't include the preceding `http/https`
+- `micropub_endpoint` - see <https://indieweb.org/obtaining-an-access-token#Micropub_Endpoint>. This must be set for the next two to work.
+- `micropub_token_endpoint` - see <https://indieweb.org/obtaining-an-access-token#Token_Endpoint>. Defaults to `https://tokens.indieauth.com/token`
+- `micropub_authorization_endpoint` - see <https://indieweb.org/obtaining-an-access-token#Authorization_Endpoint>. Defaults to `https://indieauth.com/auth`
 
 ### Post Types
 

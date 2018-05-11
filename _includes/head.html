@@ -22,6 +22,11 @@
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
+  {% if site.micropub_endpoint %}
+  <link rel="micropub" href="{{ site.micropub_endpoint }}">
+  <link rel="authorization_endpoint" href="{{ site.micropub_authorization_endpoint | default: "https://indieauth.com/auth" }}">
+  <link rel="token_endpoint" href="{{ site.micropub_token_endpoint | default: "https://tokens.indieauth.com/token" }}">
+  {% endif %}
   {% if site.google_site_verification %}
   <meta name="google-site-verification" content="{{ site.google-site-verification }}" />
   {% endif %}
