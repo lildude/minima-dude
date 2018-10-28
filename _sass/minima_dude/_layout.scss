@@ -17,11 +17,19 @@
   margin-bottom: 0;
   float: left;
   font-weight: 700;
-
   &,
   &:visited {
-    color: $grey-color-dark;
+    color: $background-color;
   }
+  span {
+    color: #fb0006;
+  }
+}
+
+.whackwhack {
+  color: #FFD400;
+  padding-right: 0.5em;
+  font-size: larger;
 }
 
 .site-nav {
@@ -209,6 +217,10 @@
 .post-link {
   display: block;
   @include relative-font-size(1.5);
+  color: $post-title-color;
+  &:hover {
+    color: $brand-color;
+  }
 }
 
 
@@ -224,7 +236,7 @@
   @include relative-font-size(2.625);
   letter-spacing: -1px;
   line-height: 1;
-  color: #5073B8;
+  color: $post-title-color;
 
   @include media-query($on-laptop) {
     @include relative-font-size(2.25);
