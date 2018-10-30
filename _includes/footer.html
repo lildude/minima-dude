@@ -7,7 +7,7 @@
         <h2 class="footer-heading">{{ site.title | escape }}</h2>
         <ul class="contact-list">
           <li>
-            {% if site.author and site.author != site.title %}
+            {% if site.author and site.author != site.title and site.minima_dude.show_author != false %}
               {{ site.author | escape }}
             {% endif %}
             </li>
