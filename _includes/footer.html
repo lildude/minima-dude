@@ -19,33 +19,33 @@
 
       <div class="footer-col footer-col-2">
         <ul class="social-media-list">
-          {% if site.strava_id %}
+          {% if site.strava.id %}
           <li>
-            {% include icon-strava.html username=site.strava_id %}
+            {% include icon-strava.html username=site.strava.id %}
           </li>
           {% endif %}
 
-          {% if site.parkrun_id %}
+          {% if site.parkrun.id %}
           <li>
-            {% include icon-parkrun.html username=site.parkrun_id %}
+            {% include icon-parkrun.html username=site.parkrun.id %}
           </li>
           {% endif %}
 
-          {% if site.powerof10_id %}
+          {% if site.powerof10.id %}
           <li>
-            {% include icon-powerof10.html username=site.powerof10_id %}
+            {% include icon-powerof10.html username=site.powerof10.id %}
           </li>
           {% endif %}
 
-          {% if site.github_username %}
+          {% if site.github.username %}
           <li>
-            {% include icon-github.html username=site.github_username %}
+            {% include icon-github.html username=site.github.username %}
           </li>
           {% endif %}
 
-          {% if site.twitter_username %}
+          {% if site.twitter.username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include icon-twitter.html username=site.twitter.username %}
           </li>
           {% endif %}
           <li>
