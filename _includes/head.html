@@ -12,15 +12,13 @@
 {% endif %}
 
 {% seo %}
-
+  <meta name="twitter:dnt" content="on">
   <link rel="shortcut icon" type="image/png" href="/img/profile.png" />
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 {% if page.layout == 'page' or page.layout == 'default' %}
   {% assign current = page.title | default: "home" | downcase | split: ' ' %}
   <link rel="stylesheet" href="/css/{{ current[0] }}.css">
 {% endif %}
-  <link rel="alternate" type="application/rss+xml" title="{{ site.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
-  <meta name="twitter:dnt" content="on">
 </head>
 {% if site.google_analytics %}
 {% include google-analytics.html %}
