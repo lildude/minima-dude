@@ -15,9 +15,8 @@
   <meta name="twitter:dnt" content="on">
   <link rel="shortcut icon" type="image/png" href="/img/profile.png" />
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
-{% if page.layout == 'page' or page.layout == 'default' %}
-  {% assign current = page.title | default: "home" | downcase | split: ' ' %}
-  <link rel="stylesheet" href="/css/{{ current[0] }}.css">
+{% if page.add_css %}
+  <link rel="stylesheet" href="{{ page.add_css }}">
 {% endif %}
 </head>
 {% if site.google_analytics %}
