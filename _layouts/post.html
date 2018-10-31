@@ -13,7 +13,7 @@ layout: default
 
   <p class="post-meta">
     — <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-      {% assign date_format = site.minima.date_format | default: "%-d %b %Y" %}
+      {% assign date_format = site.minima_dude.date_format | default: "%-d %b %Y" %}
       {{ page.date | date: date_format }}
     </time>
     {% if page.author %}
