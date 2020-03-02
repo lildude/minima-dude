@@ -289,10 +289,16 @@ ul.archives {
   li {
     list-style-type: disc;
   }
+  svg {
+    vertical-align: text-bottom;
+    stroke: #454E55;
+  }
   .i-moleskin {
     width: inherit;
+    transform: rotate(270deg);
   }
   .i-moleskin, .i-camera {
     color: $text-color;
   }
+
 }
