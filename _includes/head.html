@@ -13,9 +13,12 @@
 
 {% seo %}
   <meta name="twitter:dnt" content="on">
-  <link rel="authorization_endpoint" href="https://indieauth.com/auth">
-  <link rel="token_endpoint" href="https://tokens.indieauth.com/token">
-  <link rel="shortcut icon" type="image/png" href="/img/profile.png" />
+{% if site.microblog.username %}
+  <link href="https://micro.blog/{{ site.microblog.username }}" rel="me">
+  <link rel="authorization_endpoint" href="https://micro.blog/indieauth/auth">
+  <link rel="token_endpoint" href="https://micro.blog/indieauth/token">
+{% endif %}
+  <link rel="shortcut icon" type="image/png" href="/img/profile.png">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 {% if page.add_css %}
   <link rel="stylesheet" href="{{ page.add_css }}">
