@@ -17,7 +17,7 @@ layout: default
       {{ page.date | date: date_format }}
     </time>
     {% if page.author %}
-      • <span class="h-card" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
+      • <span class="p-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
     {% endif %}
     {% if page.tags %}
       • {% for tag in page.tags %}{{ tag | capitalize }}{% if forloop.last != true %}, {% endif %}{% endfor %}
