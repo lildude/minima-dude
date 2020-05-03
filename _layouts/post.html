@@ -12,7 +12,7 @@ layout: default
   </div>
 
   <p class="post-meta">
-    — <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    <a class="note_url u-url" href="{{ post.url | relative_url }}">★</a> <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {% assign date_format = site.minima_dude.date_format | default: "%-d %b %Y" %}
       {{ page.date | date: date_format }}
     </time>
@@ -20,7 +20,7 @@ layout: default
       • <span class="p-author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">{{ page.author }}</span></span>
     {% endif %}
     {% if page.tags %}
-      • {% for tag in page.tags %}{{ tag | capitalize }}{% if forloop.last != true %}, {% endif %}{% endfor %}
+      • {% for tag in page.tags %}<span class="p-category">{{ tag | capitalize }}</span>{% if forloop.last != true %}, {% endif %}{% endfor %}
     {% endif %}</p>
   {% if site.disqus.shortname %}
     {% include disqus_comments.html %}
