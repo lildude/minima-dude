@@ -11,26 +11,26 @@ layout: default
   <ul class="post-list">
     {% for day in postsByDay limit:14 %}
     <li>
-      <div class="post-meta">{{ day.name }}</div>
+      <div class="post-meta ">{{ day.name }}</div>
       <ul class="post-list">
         {% for post in day.items %}
           <li>
             {% if post.layout == 'photo' %}
               <div class="micropub_photo photo">
                 {{ post.content }}
-                <a class="photo_url" href="{{ post.url | relative_url }}">¶</a>
+                <a class="photo_url u-url" href="{{ post.url | relative_url }}">¶</a>
                 {% comment %}<a class="photo_url" href="{{ post.url | relative_url }}">{% include icon-instagram.svg %}</a>{% endcomment %}
               </div>
             {% else %}
               {% if post.layout == 'note' %}
               <div class="micropub_note">
                 {{ post.content }}
-                <a class="note_url" href="{{ post.url | relative_url }}">¶</a>
+                <a class="note_url u-url" href="{{ post.url | relative_url }}">¶</a>
                 <hr>
               </div>
               {% else %}
                 <h2>
-                  <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  <a class="post-link u-url" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h2>
                 {% assign word_count = post.content | strip_html | number_of_words %}
                 {% if word_count > 100 %}
