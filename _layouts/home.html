@@ -14,7 +14,7 @@ layout: default
       <div class="post-meta ">{{ day.name }}</div>
       <ul class="post-list">
         {% for post in day.items %}
-          <li class="h-entry">
+          <li>
             {% if post.layout == 'photo' %}
               <div class="micropub_photo photo">
                 {{ post.content }}
