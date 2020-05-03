@@ -8,7 +8,7 @@ layout: default
   </div>
 
   <p class="post-meta">
-    <a class="note_url u-url" href="{{ post.url | relative_url }}">★</a> <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+    <a class="note_url u-url" href="{{ page.url | relative_url }}">★</a> • <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
       {% assign date_format = site.minima.date_format | default: "%-d %b %Y" %}
       {{ page.date | date: date_format }}
     </time>
