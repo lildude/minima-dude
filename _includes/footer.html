@@ -7,9 +7,9 @@
         <h2 class="footer-heading">{{ site.title | escape }}</h2>
         <ul class="contact-list">
           <li>
-            {% if site.author and site.author != site.title and site.minima_dude.show_author != false %}
-              {{ site.author | escape }}
-            {% endif %}
+            <span rel="author" class="p-author h-card" {% if site.author and site.author != site.title and site.minima_dude.show_author != false %} style="display:none" {% endif %}>
+            {{ site.author | escape }}
+            </span>
             </li>
             {% if site.email %}
             <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
