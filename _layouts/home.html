@@ -16,16 +16,16 @@ layout: default
         {% for post in day.items %}
           <li class="h-entry">
             {% if post.layout == 'photo' %}
-              <div class="micropub_photo photo u-photo">
+              <div class="micropub_photo photo e-content">
                 {{ post.content }}
-                <a class="photo_url u-url" href="{{ post.url | relative_url }}">¶</a>
+                <a class="photo_url u-url" href="{{ post.url | relative_url }}">★</a>
                 {% comment %}<a class="photo_url" href="{{ post.url | relative_url }}">{% include icon-instagram.svg %}</a>{% endcomment %}
               </div>
             {% else %}
               {% if post.layout == 'note' %}
               <div class="micropub_note e-content">
                 {{ post.content }}
-                <a class="note_url u-url" href="{{ post.url | relative_url }}">¶</a>
+                <a class="note_url u-url" href="{{ post.url | relative_url }}">★</a>
                 <hr>
               </div>
               {% else %}
