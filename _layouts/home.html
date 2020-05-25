@@ -34,7 +34,7 @@ layout: default
                 </h2>
                 {% assign word_count = post.content | strip_html | number_of_words %}
                 {% if word_count > 100 %}
-                  <span class="p-summary">
+                  <span class="p-summary e-content">
                   {{ post.excerpt }}
                   </span>
                   <span class="more-link"><a href="{{ post.url }}">Continue reading →</a></span>
