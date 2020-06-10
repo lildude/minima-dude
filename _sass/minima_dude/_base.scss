@@ -340,6 +340,7 @@ iframe {
   .note_url {
     visibility: hidden;
     display: inline;
+    margin-left: 0.5em;
   }
   &:hover .note_url {
     visibility: visible;
