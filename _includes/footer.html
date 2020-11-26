@@ -21,35 +21,35 @@
         <ul class="social-media-list">
           {% if site.strava.id %}
           <li>
-            {% include icon-strava.html username=site.strava.id %}
+            {% include_cached icon-strava.html username=site.strava.id %}
           </li>
           {% endif %}
 
           {% if site.parkrun.id %}
           <li>
-            {% include icon-parkrun.html username=site.parkrun.id %}
+            {% include_cached icon-parkrun.html username=site.parkrun.id %}
           </li>
           {% endif %}
 
           {% if site.powerof10.id %}
           <li>
-            {% include icon-powerof10.html username=site.powerof10.id %}
+            {% include_cached icon-powerof10.html username=site.powerof10.id %}
           </li>
           {% endif %}
 
           {% if site.github.username %}
           <li>
-            {% include icon-github.html username=site.github.username %}
+            {% include_cached icon-github.html username=site.github.username %}
           </li>
           {% endif %}
 
           {% if site.twitter.username %}
           <li>
-            {% include icon-twitter.html username=site.twitter.username %}
+            {% include_cached icon-twitter.html username=site.twitter.username %}
           </li>
           {% endif %}
           <li>
-            {% include icon-feed.html %}
+            {% include_cached icon-feed.html %}
           </li>
         </ul>
       </div>

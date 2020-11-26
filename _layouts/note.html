@@ -18,7 +18,4 @@ layout: default
     {% if page.tags %}
       • {% for tag in page.tags %}<span class="p-category">{{ tag | capitalize }}</span>{% if forloop.last != true %}, {% endif %}{% endfor %}
     {% endif %}</p>
-  {% if site.disqus.shortname %}
-    {% include disqus_comments.html %}
-  {% endif %}
 </article>
