@@ -139,3 +139,11 @@ When your theme is released, only the files in `_layouts`, `_includes`, and `_sa
 ## License
 
 The theme is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+
+## TODO
+
+Implement image resizing using <https://images.weserv.nl/>, eg: replace image links with something like:
+
+```
+<img src="//images.weserv.nl?url={{ site.baseurl | replace:'http://','' }}{{ post.image }}&w=600">
+```
