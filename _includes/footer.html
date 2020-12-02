@@ -57,5 +57,8 @@
     </div>
 
   </div>
-
+  {% if site.microblog.username %}
+  <!-- Add bridgy webmention link needed for syndication -->
+  <a href="https://brid.gy/publish/twitter"></a>
+  {% endif %}
 </footer>
