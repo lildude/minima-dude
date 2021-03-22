@@ -20,12 +20,22 @@ layout: default
                 {{ post.content }}
                 <a class="photo_url u-url" href="{{ post.url | relative_url }}">★</a>
                 {% comment %}<a class="photo_url" href="{{ post.url | relative_url }}">{% include_cached icon-instagram.svg %}</a>{% endcomment %}
+                {% if post.syndication %}
+                  {% for url in post.syndication %}
+                  <a class="u-syndication" href="{{ url }}"></a>
+                  {% endfor %}
+                {% endif %}
               </div>
             {% else %}
               {% if post.layout == 'note' %}
               <div class="micropub_note e-content">
                 {{ post.content }}
                 <a class="note_url u-url" href="{{ post.url | relative_url }}">★</a>
+                {% if post.syndication %}
+                  {% for url in post.syndication %}
+                  <a class="u-syndication" href="{{ url }}"></a>
+                  {% endfor %}
+                {% endif %}
                 <hr>
               </div>
               {% else %}
@@ -42,6 +52,11 @@ layout: default
                   <span class="e-content">
                   {{ post.content }}
                   <span>
+                {% endif %}
+                {% if post.syndication %}
+                  {% for url in post.syndication %}
+                  <a class="u-syndication" href="{{ url }}"></a>
+                  {% endfor %}
                 {% endif %}
               {% endif %}
             {% endif %}

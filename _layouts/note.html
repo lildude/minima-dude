@@ -17,5 +17,11 @@ layout: default
     {% endif %}
     {% if page.tags %}
       • {% for tag in page.tags %}<span class="p-category">{{ tag | capitalize }}</span>{% if forloop.last != true %}, {% endif %}{% endfor %}
-    {% endif %}</p>
+    {% endif %}
+  </p>
+  {% if post.syndication %}
+    {% for url in post.syndication %}
+    <a class="u-syndication" href="{{ url }}"></a>
+    {% endfor %}
+  {% endif %}
 </article>
