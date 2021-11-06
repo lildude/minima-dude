@@ -28,11 +28,14 @@
   <link rel="pingback" href="https://webmention.io/{{ site.webmentions }}/xmlrpc" />
 {% endif %}
   <link rel="shortcut icon" type="image/png" href="/img/profile.png">
+  <link rel="preload" as="style" href="{{ "/assets/main.css" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
 {% if page.add_css %}
+  <link rel="preload" as="style" href="{{ page.add_css }}">
   <link rel="stylesheet" href="{{ page.add_css }}">
 {% endif %}
-  <script defer src="/assets/turbolinks.js" type="text/javascript" charset="utf-8"></script>
+  <link rel="preload" as="script" href="/assets/turbolinks.js">
+  <script defer src="/assets/turbolinks.js"></script>
 </head>
 
   <body>
