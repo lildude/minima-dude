@@ -12,7 +12,7 @@ Gem::Specification.new do |spec|
 
   spec.add_runtime_dependency 'jekyll'
   spec.add_runtime_dependency 'jekyll-include-cache'
-  spec.add_runtime_dependency 'jekyll-postcss'
+  # spec.add_runtime_dependency 'jekyll-postcss'
   spec.add_runtime_dependency 'jekyll-seo-tag'
 
   spec.add_development_dependency 'rake', '~> 12.3'
