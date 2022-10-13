@@ -43,8 +43,9 @@ layout: default
                   <a class="post-link u-url p-name" href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 </h2>
                 {% assign word_count = post.content | strip_html | number_of_words %}
-                {% if page.content contains '<!--more-->' %}
+                {% if post.content contains '<!--more-->' %}
                   {{ post.content | split:'<!--more-->' | first }}
+                  <span class="more-link"><a href="{{ post.url }}">Continue reading →</a></span>
                   {% comment %}
                   TODO: https://jonnylangefeld.com/blog/how-to-add-a-read-more-button-that-doesnt-suck-to-your-jekyll-blog
                   {% endcomment %}
