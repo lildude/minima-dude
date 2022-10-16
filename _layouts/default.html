@@ -34,6 +34,9 @@
   <link rel="preload" as="style" href="{{ page.add_css }}">
   <link rel="stylesheet" href="{{ page.add_css }}">
 {% endif %}
+{% if site.netlifycms %}
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+{% endif %}
   <script defer src="/assets/turbolinks.js"></script>
 </head>
 
@@ -49,6 +52,19 @@
 
     {% include_cached footer.html %}
 
+    {% if site.netlifycms %}
+    <script>
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", user => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () => {
+              document.location.href = "/admin/";
+            });
+          }
+        });
+      }
+    </script>
+    {% endif %}
   </body>
 
 </html>
