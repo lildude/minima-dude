@@ -45,6 +45,11 @@
             {% include_cached icon-twitter.html username=site.twitter.username %}
           </li>
           {% endif %}
+          {% if site.mastdon.username %}
+          <li>
+            {% include_cached icon-mastodon.html server=site.mastodon.server username=site.mastodon.username %}
+          </li>
+          {% endif %}
           <li>
             {% include_cached icon-feed.html %}
           </li>
