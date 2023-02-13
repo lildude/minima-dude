@@ -38,7 +38,7 @@
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 {% endif %}
 {% if site.mastodon %}
-  <link href="https://{{ site.mastodon.server}}/{{ site.mastodon.username }}" rel="me">
+  <link rel="me" href="https://{{ site.mastodon.server}}/{{ site.mastodon.username }}">
 {% endif %}
   <script defer src="/assets/turbolinks.js"></script>
 </head>
